@@ -1,5 +1,5 @@
 #!/bin/bash
-# Please make sure you add GITLAB_DOMAIN and HTML_COV_FILE_NAME variable to your project's CI
+# Please make sure you add GITLAB_DOMAIN and HTML_COV_FILE_NAME variable to your gitlab project configuration
 export PROJ_PATH="$GOPATH/src/$GITLAB_DOMAIN/$CI_PROJECT_PATH"
 export HTML_COV_FILE_PATH="$PROJ_PATH/$HTML_COV_FILE_NAME"
 echo "PROJECT PATH: " $PROJ_PATH
