@@ -1,6 +1,7 @@
 #!/bin/bash
 # Please make sure you add GITLAB_DOMAIN and HTML_COV_FILE_NAME variable to your gitlab project configuration
 echo "Setting project path to gopath..."
+echo "GOPATH: $GOPATH"
 echo "Domain: $GITLAB_DOMAIN"
 echo "CI project path: $CI_PROJECT_PATH"
 echo "HTML Coverage file name: $HTML_COV_FILE_NAME"
