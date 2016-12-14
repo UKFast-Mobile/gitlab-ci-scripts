@@ -21,8 +21,13 @@ export PROJ_PATH="$GOPATH/src/$GITLAB_DOMAIN/$CI_PROJECT_PATH"
 echo "PROJ_PATH: $PROJ_PATH"
 export HTML_COV_FILE_PATH="$PROJ_PATH/$HTML_COV_FILE_NAME"
 echo "HTML_COV_FILE_PATH: $HTML_COV_FILE_PATH"
+echo "Removing old project path"
 rm -rf $PROJ_PATH
+echo "Creating new folder at PROJ_PATH"
 mkdir -p $PROJ_PATH
-cp -r . $PROJ_PATH
+echo "Copying resource to PROJ_PATH..."
+rsync -r -ah --progress . $PROJ_PATH
+#cp -r . $PROJ_PATH
+
 cd $PROJ_PATH
 echo "Done."
