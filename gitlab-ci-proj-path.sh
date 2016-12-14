@@ -2,17 +2,17 @@
 # Please make sure you add GITLAB_DOMAIN and HTML_COV_FILE_NAME variable to your gitlab project configuration
 echo "Setting PROJ_PATH..."
 
-if [ $GITLAB_DOMAIN == "" ]; then
+if [ -z "$GITLAB_DOMAIN" ]; then
   echo "GITLAB_DOMAIN environment variable not set"
   exit 1
 fi
 
-if [ $CI_PROJECT_PATH == "" ]; then
+if [ -z "$CI_PROJECT_PATH" ]; then
   echo "CI_PROJECT_PATH environment variable not set"
   exit 1
 fi
 
-if [ $HTML_COV_FILE_NAME == ""]; then
+if [ -z "$HTML_COV_FILE_NAME" ]; then
   echo "HTML_COV_FILE_NAME environment variable not set"
   exit 1
 fi
