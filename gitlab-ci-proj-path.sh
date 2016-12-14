@@ -26,8 +26,9 @@ rm -rf $PROJ_PATH
 echo "Creating new folder at PROJ_PATH"
 mkdir -p $PROJ_PATH
 echo "Copying resource to PROJ_PATH..."
-rsync -r -ah --progress . $PROJ_PATH
-#cp -r . $PROJ_PATH
+tar c . | pv | tar x -C $PROJ_PATH
+#rsync -r -ah --progress . $PROJ_PATH
+
 
 cd $PROJ_PATH
 echo "Done."
